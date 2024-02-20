@@ -838,7 +838,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
+    title: Attribute.String;
     desc: Attribute.String;
     price: Attribute.Decimal;
     img: Attribute.Media;
@@ -854,6 +854,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToMany',
       'api::sub-category.sub-category'
     >;
+    isNew: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
